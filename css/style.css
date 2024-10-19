@@ -1861,52 +1861,46 @@ a:not([href]):not([tabindex]) {
 }
 
 .carousel-container {
-  position: relative;
-  max-width: 80%;
-  margin: auto;
-  overflow: hidden;
+  position: relative; /* Para posicionar os botões de navegação */
+  overflow: hidden; /* Para esconder o excesso de imagens */
 }
 
 .carousel-slide {
-  width: 100%;
-  height: 700px; /* Define uma altura fixa para todas as imagens */
+  display: flex; /* Usar flexbox para organizar as imagens em linha */
+  transition: transform 0.5s ease; /* Transição suave ao mudar de slide */
 }
 
 .carousel-slide img {
-  width: 100%;
-  height: 100%; /* Garante que a imagem ocupe toda a altura do contêiner */
-  object-fit: cover; /* Corta a imagem para preencher o contêiner sem distorção */
-  display: none; /* Esconde todas as imagens inicialmente */
+  max-width: 100%; /* Limitar a largura máxima para a tela do dispositivo */
+  height: auto; /* Manter a proporção da imagem */
+  flex: 0 0 auto; /* As imagens não encolhem e ocupam espaço proporcionalmente */
 }
 
-.carousel-slide img.active {
-  display: block; /* Mostra a imagem ativa */
-}
-
-
+/* Estilos dos botões de navegação */
 .prev, .next {
-  cursor: pointer;
   position: absolute;
   top: 50%;
-  width: auto;
-  margin-top: -22px;
-  padding: 16px;
-  color: white;
-  font-weight: bold;
-  font-size: 32px;
-  transition: 0.6s ease;
-  background: none; /* Remove o fundo */
-  border: none; /* Remove a borda */
-  user-select: none;
-  z-index: 10;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.8);
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 10; /* Garantir que os botões fiquem acima das imagens */
 }
 
 .prev {
-  left: 0;
+  left: 10px;
 }
 
 .next {
-  right: 0;
+  right: 10px;
+}
+
+/* Ajuste de botões para dispositivos móveis */
+@media (max-width: 768px) {
+  .prev, .next {
+      padding: 5px; /* Menor padding em telas menores */
+  }
 }
 
 .prev:hover, .next:hover {
