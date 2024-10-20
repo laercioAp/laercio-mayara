@@ -1379,6 +1379,7 @@ form label {
 }
 #fh5co-started .btn, #fh5co-message .btn {
   height: 54px;
+  width: 237px;
   border: none !important;
   background: #56D1A8;
   color: #fff;
@@ -1663,7 +1664,7 @@ form label {
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
-  padding: 8px 20px;
+  padding: 16px 20px;
 }
 .btn.btn-md {
   padding: 8px 20px !important;
@@ -1993,5 +1994,9 @@ a:not([href]):not([tabindex]) {
   font-weight: 600; /* Negrito para destacar */
   font-size: 24px;
   color: #333; /* Cor do texto, ajuste conforme sua preferência */
+}
+
+.text-adjust {
+  text-indent: -35px; /* Ajuste este valor conforme necessário */
 }
 
