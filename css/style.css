@@ -1379,7 +1379,6 @@ form label {
 }
 #fh5co-started .btn, #fh5co-message .btn {
   height: 54px;
-  width: 237px;
   border: none !important;
   background: #56D1A8;
   color: #fff;
@@ -1997,6 +1996,6 @@ a:not([href]):not([tabindex]) {
 }
 
 .text-adjust {
-  text-indent: -35px; /* Ajuste este valor conforme necessário */
+  text-indent: 12px; /* Ajuste este valor conforme necessário */
 }
 
