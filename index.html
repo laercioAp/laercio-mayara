@@ -547,50 +547,6 @@
 	</script>
 
 <script>
-	// Configuração do Firebase
-	const firebaseConfig = {
-		apiKey: "AIzaSyAZVbao3AazVq49-oxvgbIYFAxfsovLeA0",
-		authDomain: "casamento-1d486.firebaseapp.com",
-		projectId: "casamento-1d486",
-		storageBucket: "casamento-1d486.appspot.com",
-		messagingSenderId: "538473717030",
-		appId: "1:538473717030:web:f83e3392b746b4367e75e7",
-		measurementId: "G-GRTN41GC1C"
-	};
-
-	// Inicializando o Firebase
-	const app = firebase.initializeApp(firebaseConfig);
-	const database = firebase.database();
-
-	// Adicionar um listener para o formulário
-	document.getElementById('guestForm').addEventListener('submit', function(e) {
-		e.preventDefault();
-
-		const nome = document.getElementById('nome').value;
-		const quantidade_adultos = document.getElementById('quantidade_adultos').value;
-		const quantidade_criancas = document.getElementById('quantidade_criancas').value;
-		const nomes_criancas = document.getElementById('nomes_criancas').value;
-		const telefone = document.getElementById('telefone').value;
-
-		// Salvando dados no Firebase Realtime Database
-		const newGuestRef = database.ref('convidados').push();
-		newGuestRef.set({
-			nome: nome,
-			quantidade_adultos: quantidade_adultos,
-			quantidade_criancas: quantidade_criancas,
-			nomes_criancas: nomes_criancas,
-			telefone: telefone
-		}).then(() => {
-			alert('Dados enviados com sucesso!');
-			document.getElementById('guestForm').reset();
-		}).catch(error => {
-			console.error('Erro ao enviar dados: ', error);
-			alert('Erro ao enviar dados, por favor tente novamente.');
-		});
-	});
-</script>
-
-<script>
 	let slideIndex = 0;
 	const slides = document.querySelectorAll('.carousel-slide img');
 	const modal = document.getElementById('imageModal');
